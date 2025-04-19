@@ -1,15 +1,16 @@
-import logo from "./logo.svg";
-import Documentation from "./Dokumentation";
+// import logo from "./logo.svg";
+// import Documentation from "./Dokumentation";
+import React from "react";
+import Counter from "./Counter";
 import "./App.css";
 
 function App() {
-  const headerText = "Hello Youtube from my variable";
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Documentation />
-        <p>{headerText}</p>
+        <h2>Wellcome to my counter :D </h2>
+
+        <Counter />
       </header>
     </div>
   );
