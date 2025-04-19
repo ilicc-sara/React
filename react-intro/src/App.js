@@ -1,16 +1,16 @@
 // import logo from "./logo.svg";
 // import Documentation from "./Dokumentation";
+// import Counter from "./Counter";
 import React from "react";
-import Counter from "./Counter";
 import "./App.css";
+import Employee from "./Employee";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>Wellcome to my counter :D </h2>
-
-        <Counter />
+        <h1> Company Directory </h1>
+        <Employee />
       </header>
     </div>
   );
