@@ -1,11 +1,11 @@
 import React from "react";
 
 const Employee = (props) => {
-  console.log(props);
+  const { firstName, lastName, age } = props;
   return (
     <div>
       {/* prettier-ignore */}
-      <h6> Employee Name: {props.firstName} {" "} {props.lastName}</h6>
+      <h6> Employee Name: {firstName} {lastName} Who is age: {age}</h6>
     </div>
   );
 };
