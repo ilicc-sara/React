@@ -10,7 +10,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1> Company Directory </h1>
-        <Employee />
+        <Employee firstName="Jack" lastName="Smith" />
+        <Employee firstName="Stephanie" lastName="A" />
+        <Employee firstName="George" lastName="B" />
+        <Employee firstName="Anthony" lastName="C" />
       </header>
     </div>
   );
