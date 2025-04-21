@@ -48,15 +48,28 @@ import Employee from "./Employee";
 //   },
 // };
 
-const employees = ["Anthony", "Kevin", "Stephanie", "George"];
+const employees = [
+  {
+    name: "Anthony",
+    id: "ABC",
+  },
+  {
+    name: "George",
+    id: "ACR",
+  },
+  {
+    name: "Stephanie",
+    id: "STE",
+  },
+];
 
 function App() {
   return (
     <div className="App">
       <h1>
-        {employees.map((employee) => {
-          return <h1> {employee}</h1>;
-        })}{" "}
+        {employees.map((employee) => (
+          <Employee key={employee.id} name={employee.name} id={employee.id} />
+        ))}
       </h1>
     </div>
   );
