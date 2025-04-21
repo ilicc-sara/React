@@ -1,31 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Employee from "./Employee";
 
-const employee = [
-  {
-    name: "Anthony",
-    id: "ABC",
-  },
-  {
-    name: "George",
-    id: "QWE",
-  },
-];
-
 function App() {
-  const baseEmployeeObjet = {
-    role: "employee",
-    company: "CodeSandbox",
-  };
-
-  const firstEmployee = { ...baseEmployeeObjet, ...employee[0] };
-  console.log(firstEmployee);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <Employee {...firstEmployee} />
+      <h1> Welcome to the app! </h1>
+      <button onClick={() => setLoggedIn(!loggedIn)}>
+        {loggedIn ? "Log out" : "Log in"}
+      </button>
+      {loggedIn ? (
+        <h1> Hello, Anthony! </h1>
+      ) : (
+        <div>
+          <h2> Please log in to continue </h2>
+        </div>
+      )}
     </div>
   );
 }
